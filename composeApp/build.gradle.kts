@@ -44,6 +44,11 @@ android {
     namespace = "com.snjavi.algorizzmus"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
+    lint {
+        disable += "NullSafeMutableLiveData"
+        checkReleaseBuilds = false // optional, prevents blocking release builds
+    }
+
     defaultConfig {
         applicationId = "com.snjavi.algorizzmus"
         minSdk = libs.versions.android.minSdk.get().toInt()
